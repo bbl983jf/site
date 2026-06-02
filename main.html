@@ -546,6 +546,8 @@
             border-radius: 28px;
             overflow: hidden;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
 
         .hero-preview video {
@@ -1816,58 +1818,62 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-wrapper">
-            <div class="hero-content">
-                <div class="hero-logo">
-                    <img src="logo.png" alt="Sorn Services">
+<section class="hero">
+    <div class="hero-wrapper">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="logo.png" alt="Sorn Services">
+            </div>
+            <h1 class="hero-title">
+                Elevate Your<br><span class="gradient">Gaming Experience</span>
+            </h1>
+            <p class="hero-subtitle">
+                Premium gaming optimizations. Built for play at the highest level. Soon, will be trusted by thousands. 
+            </p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn-primary">
+                    Browse Products
+                </a>
+                <a href="https://discord.gg/ryrY2JGXP6" target="_blank" class="btn-secondary">
+                    Join Discord
+                </a>
+            </div>
+            <div class="hero-stats" style="border-top: 1px solid rgba(201,168,56,0.15); padding-top: 36px; margin-top: 36px;">
+                <div class="stat">
+                    <div class="stat-value">4<span>+</span></div>
+                    <div class="stat-label">Active Users</div>
                 </div>
-                <h1 class="hero-title">
-                    Elevate Your<br><span class="gradient">Gaming Experience</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Premium gaming optimizations. Built for play at the highest level. Soon, will be trusted by thousands. 
-                </p>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn-primary">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                        Browse Products
-                    </a>
-                    <a href="https://discord.gg/ryrY2JGXP6" target="_blank" class="btn-secondary">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
-                        Join Discord
-                    </a>
+                <div class="stat">
+                    <div class="stat-value">99<span>%</span></div>
+                    <div class="stat-label">Satisfaction</div>
                 </div>
-                <div class="hero-stats" style="border-top: 1px solid rgba(201,168,56,0.15); padding-top: 36px; margin-top: 36px;">
-                    <div class="stat">
-                        <div class="stat-value">4<span>+</span></div>
-                        <div class="stat-label">Active Users</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">99<span>%</span></div>
-                        <div class="stat-label">Satisfaction</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">24<span>/7</span></div>
-                        <div class="stat-label">Support</div>
-                    </div>
+                <div class="stat">
+                    <div class="stat-value">24<span>/7</span></div>
+                    <div class="stat-label">Support</div>
                 </div>
             </div>
-            <div class="hero-preview" onclick="openFreeModal()">
-                <video src="freebuild.mp4" autoplay loop muted playsinline preload="metadata"></video>
-                <div class="hero-preview-overlay">
+        </div>
+
+        <!-- Hero Preview with Streamable Video -->
+        <div class="hero-preview" onclick="openFreeModal()">
+            <div style="position: relative; width: 580px; max-width: 100%; aspect-ratio: 16/9; border-radius: 28px; overflow: hidden;">
+                <iframe
+                    src="https://streamable.com/e/txuho0?autoplay=1&muted=1&loop=1"
+                    allow="autoplay; fullscreen"
+                    allowfullscreen
+                    style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"
+                ></iframe>
+                <div class="hero-preview-overlay" style="position:absolute; top:0; left:0; right:0; bottom:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%); z-index:2; pointer-events:none;">
                     <h3 class="hero-preview-title">Get Started <span>Free</span></h3>
                     <p class="hero-preview-label">Try our optimization tool at no cost</p>
                     <button class="hero-free-btn">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-                        </svg>
                         Free Download
                     </button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Free Download Modal -->
     <div class="free-modal" id="freeModal">
@@ -1918,9 +1924,7 @@
             <!-- Zero Delay -->
             <div class="product-card">
                 <div class="product-image-container">
-                    <img src="delay.png" alt="Zero Delay" class="product-image">
-                        <source src="delay.png" type="image/img">
-                    </video>
+                    <img src="https://raw.githubusercontent.com/bbl983jf/meow/refs/heads/main/delay.png" alt="Zero Delay" class="product-image">
                 </div>
                 <div class="product-content">
                     <h3 class="product-name">Zero Delay</h3>
@@ -1952,11 +1956,16 @@
             
             <!-- Keyboard Macro -->
             <div class="product-card">
-                <div class="product-image-container">
-                    <video class="product-video" muted loop playsinline preload="none">
-                        <source src="showcase.mp4" type="video/mp4">
-                    </video>
-                </div>
+    <div class="product-image-container">
+        <div style="position:relative; width:100%; height:0; padding-bottom:56.25%;">
+            <iframe 
+                src="https://streamable.com/e/mqm2vd?autoplay=1&muted=1" 
+                allow="fullscreen;autoplay" 
+                allowfullscreen 
+                style="border:none; width:100%; height:100%; position:absolute; left:0; top:0; overflow:hidden;">
+            </iframe>
+        </div>
+    </div>
                 <div class="product-content">
                     <h3 class="product-name">Keyboard Macro</h3>
                     <div class="product-subtitle">V1.6</div>
