@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorn Services</title>
+    <title>Sorn Services - Elevate Your Game</title>
     <link rel="png" type="image/png" href="icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
@@ -881,41 +880,9 @@
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
             gap: 24px;
             justify-content: center;
-            max-width: 1100px;
-            margin: 0 auto 24px;
-        }
-
-        .products-grid-2 {
-            grid-template-columns: repeat(2, 1fr);
-            max-width: 900px;
-        }
-
-        .products-grid-3 {
-            grid-template-columns: repeat(3, 1fr);
-            max-width: 1100px;
-        }
-
-        .product-card-featured {
-            border-color: rgba(201, 168, 56, 0.15);
-        }
-
-        @media (max-width: 900px) {
-            .products-grid-2,
-            .products-grid-3 {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 700px) {
-            .products-grid,
-            .products-grid-2,
-            .products-grid-3 {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-            }
         }
 
         .product-card {
@@ -1010,160 +977,6 @@
             width: 14px;
             height: 14px;
             stroke: currentColor;
-        }
-
-        .product-video-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #100e08 0%, #080706 100%);
-            color: var(--text-muted);
-            gap: 12px;
-        }
-
-        .product-video-placeholder svg {
-            width: 48px;
-            height: 48px;
-            stroke: var(--primary);
-            opacity: 0.7;
-        }
-
-        .product-video-placeholder span {
-            font-size: 13px;
-            font-weight: 500;
-        }
-
-        .product-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .product-badges {
-            position: absolute;
-            top: 14px;
-            left: 14px;
-            right: 14px;
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            z-index: 2;
-        }
-
-        .product-badge {
-            padding: 7px 14px;
-            background: rgba(239, 68, 68, 0.9);
-            border-radius: 8px;
-            font-size: 11px;
-            font-weight: 700;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            backdrop-filter: blur(8px);
-        }
-
-        .product-badge.sale {
-            background: rgba(239, 68, 68, 0.95);
-        }
-
-        .product-badge.popular {
-            background: linear-gradient(135deg, rgba(249, 115, 22, 0.95), rgba(234, 88, 12, 0.95));
-        }
-
-        .product-badge.best-value {
-            background: linear-gradient(135deg, rgba(201, 168, 56, 0.95), rgba(160, 128, 36, 0.95));
-        }
-
-        .product-badge.new {
-            background: rgba(34, 197, 94, 0.9);
-        }
-
-        .product-badge.updated {
-            position: absolute;
-            top: -45px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, #C9A838, #e8c84a);
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: white;
-            z-index: 20;
-            animation: updated-pulse 2s ease-in-out infinite;
-            box-shadow: 0 0 20px rgba(201, 168, 56, 0.5), 0 0 40px rgba(201, 168, 56, 0.3), 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .product-badge.updated::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 12px solid transparent;
-            border-right: 12px solid transparent;
-            border-top: 12px solid #e8c84a;
-            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-        }
-
-        @keyframes updated-pulse {
-            0%, 100% {
-                box-shadow: 0 0 20px rgba(201, 168, 56, 0.5), 0 0 40px rgba(201, 168, 56, 0.3), 0 4px 15px rgba(0, 0, 0, 0.3);
-            }
-            50% {
-                box-shadow: 0 0 35px rgba(201, 168, 56, 0.8), 0 0 70px rgba(201, 168, 56, 0.5), 0 4px 15px rgba(0, 0, 0, 0.3);
-            }
-        }
-
-        .product-card:has(.product-badge.updated) {
-            margin-top: 50px;
-            overflow: visible !important;
-        }
-
-        .premium-v4-banner {
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
-            z-index: 20;
-            max-width: calc(100% - 20px);
-        }
-
-        .premium-v4-banner .product-badge.updated {
-            position: static;
-            left: auto;
-            top: auto;
-            transform: none;
-            animation: updated-pulse 2s ease-in-out infinite;
-        }
-
-        .premium-v4-banner .product-badge.updated::after {
-            display: none;
-        }
-
-        .product-badge.v4-out {
-            background: linear-gradient(135deg, #fde047, #d97706);
-            color: #0a0a12;
-            text-transform: none;
-            font-size: 12px;
-            padding: 10px 16px;
-            letter-spacing: 0.4px;
-            box-shadow: 0 4px 20px rgba(234, 179, 8, 0.45);
-        }
-
-        .product-card.premium-v4-card {
-            margin-top: 52px;
-            overflow: visible !important;
         }
 
         .product-content {
@@ -1819,62 +1632,62 @@
     </div>
 
     <!-- Hero Section -->
-<section class="hero">
-    <div class="hero-wrapper">
-        <div class="hero-content">
-            <div class="hero-logo">
-                <img src="logo.png" alt="Sorn Services">
-            </div>
-            <h1 class="hero-title">
-                Elevate Your<br><span class="gradient">Gaming Experience</span>
-            </h1>
-            <p class="hero-subtitle">
-                Premium gaming optimizations. Built for play at the highest level. Soon, will be trusted by thousands. 
-            </p>
-            <div class="hero-buttons">
-                <a href="#products" class="btn-primary">
-                    Browse Products
-                </a>
-                <a href="https://discord.gg/ryrY2JGXP6" target="_blank" class="btn-secondary">
-                    Join Discord
-                </a>
-            </div>
-            <div class="hero-stats" style="border-top: 1px solid rgba(201,168,56,0.15); padding-top: 36px; margin-top: 36px;">
-                <div class="stat">
-                    <div class="stat-value">4<span>+</span></div>
-                    <div class="stat-label">Active Users</div>
+    <section class="hero">
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="logo.png" alt="Sorn Services">
                 </div>
-                <div class="stat">
-                    <div class="stat-value">99<span>%</span></div>
-                    <div class="stat-label">Satisfaction</div>
+                <h1 class="hero-title">
+                    Elevate Your<br><span class="gradient">Gaming Experience</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Premium gaming optimizations. Built for play at the highest level. Soon, will be trusted by thousands. 
+                </p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn-primary">
+                        Browse Products
+                    </a>
+                    <a href="https://discord.gg/ryrY2JGXP6" target="_blank" class="btn-secondary">
+                        Join Discord
+                    </a>
                 </div>
-                <div class="stat">
-                    <div class="stat-value">24<span>/7</span></div>
-                    <div class="stat-label">Support</div>
+                <div class="hero-stats" style="border-top: 1px solid rgba(201,168,56,0.15); padding-top: 36px; margin-top: 36px;">
+                    <div class="stat">
+                        <div class="stat-value">4<span>+</span></div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">99<span>%</span></div>
+                        <div class="stat-label">Satisfaction</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">24<span>/7</span></div>
+                        <div class="stat-label">Support</div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Hero Preview with Streamable Video -->
-        <div class="hero-preview" onclick="openFreeModal()">
-            <div style="position: relative; width: 580px; max-width: 100%; aspect-ratio: 16/9; border-radius: 28px; overflow: hidden;">
-                <iframe
-                    src="https://streamable.com/e/txuho0?autoplay=1&muted=1&loop=1"
-                    allow="autoplay; fullscreen"
-                    allowfullscreen
-                    style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"
-                ></iframe>
-                <div class="hero-preview-overlay" style="position:absolute; top:0; left:0; right:0; bottom:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%); z-index:2; pointer-events:none;">
-                    <h3 class="hero-preview-title">Get Started <span>Free</span></h3>
-                    <p class="hero-preview-label">Try our optimization tool at no cost</p>
-                    <button class="hero-free-btn">
-                        Free Download
-                    </button>
+            <!-- Hero Preview with Streamable Video -->
+            <div class="hero-preview" onclick="openFreeModal()">
+                <div style="position: relative; width: 580px; max-width: 100%; aspect-ratio: 16/9; border-radius: 28px; overflow: hidden;">
+                    <iframe
+                        src="https://streamable.com/e/txuho0?autoplay=1&muted=1&loop=1"
+                        allow="autoplay; fullscreen"
+                        allowfullscreen
+                        style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"
+                    ></iframe>
+                    <div class="hero-preview-overlay" style="position:absolute; top:0; left:0; right:0; bottom:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%); z-index:2; pointer-events:none;">
+                        <h3 class="hero-preview-title">Get Started <span>Free</span></h3>
+                        <p class="hero-preview-label">Try our optimization tool at no cost</p>
+                        <button class="hero-free-btn">
+                            Free Download
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Free Download Modal -->
     <div class="free-modal" id="freeModal">
@@ -1921,24 +1734,43 @@
                         <p class="product-category-desc">Optimize your PC for maximum gaming performance</p>
                     </div>
                 </div>
-                <div class="products-grid" style="grid-template-columns: minmax(280px, 400px); justify-content: center;">
-            <!-- Zero Delay -->
-            <div class="product-card">
-                <div class="product-image-container">
-                    <img src="https://raw.githubusercontent.com/bbl983jf/meow/refs/heads/main/delay.png" alt="Zero Delay" class="product-image">
-                </div>
-                <div class="product-content">
-                    <h3 class="product-name">Zero Delay</h3>
-                    <div class="product-subtitle">Actual Zero Delay!</div>
-                    <p class="product-desc">Eliminate input lag completely. </p>
-                    <div class="product-footer">
-                        <div class="product-pricing">
-                            <div class="product-price">$3.99</div>
+                <div class="products-grid">
+                    <!-- Zero Delay -->
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://raw.githubusercontent.com/bbl983jf/meow/refs/heads/main/delay.png" alt="Zero Delay" class="product-image">
                         </div>
-                        <a href="https://sorn.sellhub.cx/product/0delay/" target="_blank" class="product-btn">Get Now</a>
+                        <div class="product-content">
+                            <h3 class="product-name">Zero Delay</h3>
+                            <div class="product-subtitle">Actual Zero Delay!</div>
+                            <p class="product-desc">Eliminate input lag completely.</p>
+                            <div class="product-footer">
+                                <div class="product-pricing">
+                                    <div class="product-price">$3.99</div>
+                                </div>
+                                <a href="https://sorn.sellhub.cx/product/0delay/" target="_blank" class="product-btn">Get Now</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+
+                    <!-- GPU Optimizer -->
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <!-- REPLACE THIS SRC WITH YOUR ACTUAL GPU OPTIMIZER IMAGE LINK -->
+                            <img src="https://via.placeholder.com/400x240?text=GPU+Optimizer" alt="GPU Optimizer" class="product-image">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-name">GPU Optimizer</h3>
+                            <div class="product-subtitle">Low Latency & Performance</div>
+                            <p class="product-desc">Reduce input lag, disable Windows animations, and unlock GPU performance with safe, architecture‑aware registry tweaks for NVIDIA & AMD.</p>
+                            <div class="product-footer">
+                                <div class="product-pricing">
+                                    <div class="product-price">$2.99</div>
+                                </div>
+                                <a href="https://sorn.sellhub.cx/product/gpu/" target="_blank" class="product-btn">Get Now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1954,35 +1786,34 @@
                     </div>
                 </div>
                 <div class="products-grid">
-            
-            <!-- Keyboard Macro -->
-            <div class="product-card">
-    <div class="product-image-container">
-        <div style="position:relative; width:100%; height:0; padding-bottom:56.25%;">
-            <iframe 
-                src="https://streamable.com/e/mqm2vd?autoplay=1&muted=1" 
-                allow="fullscreen;autoplay" 
-                allowfullscreen 
-                style="border:none; width:100%; height:100%; position:absolute; left:0; top:0; overflow:hidden;">
-            </iframe>
-        </div>
-    </div>
-                <div class="product-content">
-                    <h3 class="product-name">Keyboard Macro</h3>
-                    <div class="product-subtitle">V1.7</div>
-                    <p class="product-desc">Drag, Double edit and pickup macro. fastest and cheapest on the market.
-.</p>
-                    <div class="product-footer">
-                        <div class="product-pricing">
-                            <div class="product-price">$2.99</div>
+                    <!-- Keyboard Macro -->
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <div style="position:relative; width:100%; height:0; padding-bottom:56.25%;">
+                                <iframe 
+                                    src="https://streamable.com/e/mqm2vd?autoplay=1&muted=1" 
+                                    allow="fullscreen;autoplay" 
+                                    allowfullscreen 
+                                    style="border:none; width:100%; height:100%; position:absolute; left:0; top:0; overflow:hidden;">
+                                </iframe>
+                            </div>
                         </div>
-                        <a href="https://sorn.sellhub.cx/product/Macro/" target="_blank" class="product-btn">Get Now</a>
+                        <div class="product-content">
+                            <h3 class="product-name">Keyboard Macro</h3>
+                            <div class="product-subtitle">V1.7</div>
+                            <p class="product-desc">Drag, Double edit and pickup macro. fastest and cheapest on the market.</p>
+                            <div class="product-footer">
+                                <div class="product-pricing">
+                                    <div class="product-price">$2.99</div>
+                                </div>
+                                <a href="https://sorn.sellhub.cx/product/Macro/" target="_blank" class="product-btn">Get Now</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-                </div>
-            </div>
-
+        </div>
+    </section>
 
     <!-- Features Section -->
     <section class="section" id="features">
@@ -2023,8 +1854,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- FAQ Section -->
     <section class="faq-section" id="faq">
@@ -2069,7 +1898,6 @@
         </div>
     </section>
 
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -2090,7 +1918,6 @@
             <div class="footer-column">
                 <h4>Support</h4>
                 <a href="https://discord.com/invite/ryrY2JGXP6">Discord Server</a>
-            
             </div>
         </div>
         <div class="footer-bottom">
@@ -2388,8 +2215,6 @@
         createParticles();
         drawBackground();
 
-
-
         // ============ IMAGE PREVIEW MODAL ============
         const previewModal = document.getElementById('previewModal');
         const previewImage = document.getElementById('previewImage');
@@ -2426,29 +2251,6 @@
                 }
             });
         });
-
-        // Lazy load videos - only load and play when visible
-        const videoObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const video = entry.target;
-                if (entry.isIntersecting) {
-                    // Load and play video when visible
-                    if (video.preload === 'none') {
-                        video.preload = 'auto';
-                        video.load();
-                    }
-                    video.play().catch(() => {});
-                } else {
-                    // Pause when not visible
-                    video.pause();
-                }
-            });
-        }, { threshold: 0.25 });
-
-        document.querySelectorAll('.product-video').forEach(video => {
-            videoObserver.observe(video);
-        });
     </script>
-
 </body>
 </html>
