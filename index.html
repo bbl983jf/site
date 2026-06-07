@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorn Services</title>
-    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="png" type="image/png" href="icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -121,6 +121,87 @@
             z-index: 0;
         }
 
+        /* ============ PURCHASE NOTIFICATION ============ */
+        .purchase-notification {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: rgba(10, 10, 18, 0.95);
+            border: 1px solid rgba(107, 47, 95, 0.3);
+            border-radius: 16px;
+            padding: 16px 24px 16px 20px;
+            min-width: 340px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            z-index: 9999;
+            backdrop-filter: blur(20px);
+            transform: translateX(400px);
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            max-width: 340px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(107, 47, 95, 0.08);
+        }
+
+        .purchase-notification.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .purchase-notification .notif-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .purchase-notification .notif-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: #080808;
+        }
+
+        .purchase-notification .notif-content {
+            flex: 1;
+        }
+
+        .purchase-notification .notif-title {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-dim);
+            margin-bottom: 2px;
+        }
+
+        .purchase-notification .notif-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+
+        .purchase-notification .notif-product {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .purchase-notification .notif-location {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 3px;
+        }
+
+        .purchase-notification .notif-time {
+            font-size: 10px;
+            color: var(--text-muted);
+            white-space: nowrap;
+            margin-left: 16px;
+            flex-shrink: 0;
+        }
 
         /* ============ IMAGE PREVIEW MODAL ============ */
         .preview-modal {
@@ -1617,7 +1698,7 @@ body{
                         Join Discord
                     </a>
                 </div>
-                <div class="hero-stats" style="border-top: 1px solid rgba(91,124,250,0.15); padding-top: 36px; margin-top: 36px;">
+                <div class="hero-stats" style="border-top: 1px solid rgba(201,168,56,0.15); padding-top: 36px; margin-top: 36px;">
                     <div class="stat">
                         <div class="stat-value">4<span>+</span></div>
                         <div class="stat-label">Active Users</div>
@@ -1792,7 +1873,7 @@ body{
                         <div class="product-content">
                             <h3 class="product-name">Keyboard Macro</h3>
                             <div class="product-subtitle">V2.0</div>
-                            <p class="product-desc">Drag, Double edit, prefire, and autobuild and pickup macro. fastest and cheapest on the market.</p>
+                            <p class="product-desc">Drag, Double edit and pickup macro. fastest and cheapest on the market.</p>
                             <div class="product-footer">
                                 <div class="product-pricing">
                                     <div class="product-price">$24.99</div>
@@ -1914,7 +1995,9 @@ body{
         <div class="footer-bottom">
             <p class="footer-copyright">© 2026 Sorn Services. All rights reserved.</p>
             <div class="footer-legal">
-                <a href="tos.html"></a>
+                <a href="tos.html" target="_blank" rel="noopener noreferrer">
+    Terms of Service
+               </a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Refund Policy</a>
             </div>
@@ -2244,19 +2327,5 @@ body{
         });
     </script>
 
-
-
-    <div class="glow-top"></div>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="main.html" class="nav-logo">
-            <img src="logo.png" alt="Sorn Services">
-        </a>
-        <a href="main.html" class="nav-back">
-            <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-            Back to Home
-        </a>
-    </nav>
 </body>
 </html>
