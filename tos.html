@@ -405,7 +405,22 @@
             .toc-list { grid-template-columns: 1fr; }
             .page-footer { flex-direction: column; align-items: flex-start; }
         }
-    </style>
+    
+:root {
+    --primary: #6B2F5F;
+    --primary-glow: rgba(107, 47, 95, 0.45);
+    --primary-dim: rgba(107, 47, 95, 0.15);
+    --border: rgba(107, 47, 95, 0.12);
+}
+.toc, .callout, .callout-warning, .legal-caps {
+    background: rgba(13,13,13,0.95) !important;
+    border: 1px solid rgba(107,47,95,0.2) !important;
+}
+.callout-warning {
+    border-left: 3px solid #6B2F5F !important;
+}
+
+</style>
 </head>
 <body>
 
